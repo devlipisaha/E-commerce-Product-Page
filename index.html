@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HorecaGemak – Creative Banner Masterpieces</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,900&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,700&family=DM+Sans:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: #111; color: #fff; padding: 40px 16px 60px; }
+
+.page-header { text-align: center; margin-bottom: 56px; }
+.page-header p { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: #555; margin-bottom: 10px; }
+.page-header h1 { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: #fff; letter-spacing: 1px; }
+
+.concept { max-width: 800px; margin: 0 auto 70px; }
+.concept-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #444; margin-bottom: 8px; }
+.concept-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+.concept-title::after { content: ''; flex: 1; height: 1px; background: #222; }
+
+/* Mockup shell */
+.shell { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.shell-top { background: #fff; padding: 8px 18px; border-bottom: 2px solid #2479b4; display: flex; align-items: center; gap: 12px; }
+.s-logo { font-size: 15px; font-weight: 800; }
+.s-logo .o { color: #e8660a; } .s-logo .b { color: #2479b4; }
+.s-tag { font-size: 8px; color: #aaa; display: block; }
+.shell-nav { background: #2479b4; padding: 5px 18px; font-size: 10px; color: rgba(255,255,255,.7); }
+.shell-body { display: grid; grid-template-columns: 210px 1fr; padding: 14px 18px; gap: 0; background: #fff; color: #333; }
+.s-imgcol { border-right: 1px solid #f0f0f0; padding-right: 14px; display: flex; align-items: center; justify-content: center; }
+.s-infocol { padding-left: 16px; display: flex; flex-direction: column; gap: 8px; }
+.s-title { font-size: 11px; font-weight: 700; color: #1a1a1a; line-height: 1.4; }
+.s-price { font-size: 24px; font-weight: 800; color: #1a1a1a; line-height: 1; }
+.s-price small { font-size: 10px; color: #888; font-weight: 400; }
+.s-save { font-size: 10px; color: #2479b4; font-weight: 700; }
+.s-cart { background: #4caf50; color: #fff; border: none; border-radius: 3px; padding: 10px; font-size: 12px; font-weight: 700; cursor: pointer; width: 100%; font-family: 'DM Sans', sans-serif; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   BANNER 1: "BLADE THEATRE"
+   The machine cuts the banner in half. A blade sweeps through.
+   Left = dark kitchen. Right = lit ingredients flying out.
+   The product ERUPTS from center.
+═══════════════════════════════════════════════════════════ */
+
+@keyframes blade-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes hero-rise { from { transform: translateY(18px) scale(.9); opacity:0; } to { transform: translateY(0) scale(1); opacity:1; } }
+@keyframes ingredient-orbit-1 {
+  0%   { transform: rotate(0deg)   translateX(42px) rotate(0deg)   scale(1); }
+  50%  { transform: rotate(180deg) translateX(42px) rotate(-180deg) scale(1.15); }
+  100% { transform: rotate(360deg) translateX(42px) rotate(-360deg) scale(1); }
+}
+@keyframes ingredient-orbit-2 {
+  0%   { transform: rotate(60deg)  translateX(52px) rotate(-60deg)  scale(1); }
+  50%  { transform: rotate(240deg) translateX(52px) rotate(-240deg) scale(1.1); }
+  100% { transform: rotate(420deg) translateX(52px) rotate(-420deg) scale(1); }
+}
+@keyfunction ingredient-orbit-3 {}
+@keyframes ingredient-orbit-3 {
+  0%   { transform: rotate(140deg) translateX(38px) rotate(-140deg) scale(1); }
+  50%  { transform: rotate(320deg) translateX(38px) rotate(-320deg) scale(1.2); }
+  100% { transform: rotate(500deg) translateX(38px) rotate(-500deg) scale(1); }
+}
+@keyframes ingredient-orbit-4 {
+  0%   { transform: rotate(220deg) translateX(56px) rotate(-220deg) scale(1); }
+  50%  { transform: rotate(400deg) translateX(56px) rotate(-400deg) scale(.9); }
+  100% { transform: rotate(580deg) translateX(56px) rotate(-580deg) scale(1); }
+}
+@keyframes ingredient-orbit-5 {
+  0%   { transform: rotate(290deg) translateX(44px) rotate(-290deg) scale(1); }
+  50%  { transform: rotate(470deg) translateX(44px) rotate(-470deg) scale(1.1); }
+  100% { transform: rotate(650deg) translateX(44px) rotate(-650deg) scale(1); }
+}
+@keyframes glow-pulse {
+  0%,100% { opacity: .4; transform: scale(1); }
+  50%      { opacity: .7; transform: scale(1.08); }
+}
+@keyframes text-in-1 { from { transform: translateX(-20px); opacity:0; } to { transform: translateX(0); opacity:1; } }
+@keyframes text-in-2 { from { transform: translateX(-20px); opacity:0; } to { transform: translateX(0); opacity:1; } }
+@keyframes text-in-3 { from { transform: translateX(-20px); opacity:0; } to { transform: translateX(0); opacity:1; } }
+
+.b1 {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 140px;
+  display: flex;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+}
+
+/* Left dark half */
+.b1-left {
+  flex: 1;
+  background: linear-gradient(135deg, #0d1117 0%, #151c27 100%);
+  padding: 16px 0 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+/* subtle dot grid */
+.b1-left::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+.b1-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase;
+  color: #e8660a;
+  animation: text-in-1 .6s ease both;
+}
+.b1-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px; font-weight: 900; line-height: .95; text-transform: uppercase;
+  color: #fff;
+  animation: text-in-2 .6s .1s ease both;
+}
+.b1-headline .slash { color: #e8660a; }
+.b1-sub {
+  font-size: 10px; color: rgba(255,255,255,.5); line-height: 1.4; margin-top: 2px;
+  max-width: 160px;
+  animation: text-in-3 .6s .2s ease both;
+}
+.b1-btn {
+  margin-top: 8px;
+  display: inline-flex; align-items: center; gap: 5px;
+  background: #e8660a; color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 3px; border: none; cursor: pointer; text-decoration: none;
+  align-self: flex-start;
+  transition: background .15s, transform .15s;
+  animation: text-in-3 .6s .3s ease both;
+}
+.b1-btn:hover { background: #ff7a22; transform: scale(1.04); }
+
+/* Center machine stage */
+.b1-center {
+  width: 148px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #0d1117, #1a2236, #0d1117);
+  z-index: 2;
+  overflow: visible;
+}
+/* Diagonal cut lines */
+.b1-center::before {
+  content: '';
+  position: absolute; top: 0; bottom: 0;
+  left: -1px; width: 1px;
+  background: linear-gradient(180deg, transparent, #e8660a60, #e8660a, #e8660a60, transparent);
+}
+.b1-center::after {
+  content: '';
+  position: absolute; top: 0; bottom: 0;
+  right: -1px; width: 1px;
+  background: linear-gradient(180deg, transparent, #e8660a60, #e8660a, #e8660a60, transparent);
+}
+
+/* Glow halo behind machine */
+.b1-halo {
+  position: absolute;
+  width: 90px; height: 90px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,102,10,.35) 0%, transparent 70%);
+  animation: glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* Orbiting ingredients */
+.b1-orbit-system {
+  position: absolute;
+  width: 120px; height: 120px;
+  display: flex; align-items: center; justify-content: center;
+}
+.b1-ingredient {
+  position: absolute;
+  font-size: 16px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+}
+.b1-ingredient:nth-child(1) { animation: ingredient-orbit-1 4s linear infinite; }
+.b1-ingredient:nth-child(2) { animation: ingredient-orbit-2 5s linear infinite; }
+.b1-ingredient:nth-child(3) { animation: ingredient-orbit-3 3.5s linear infinite; }
+.b1-ingredient:nth-child(4) { animation: ingredient-orbit-4 6s linear infinite; }
+.b1-ingredient:nth-child(5) { animation: ingredient-orbit-5 4.5s linear infinite; }
+
+/* Machine itself */
+.b1-machine {
+  position: relative; z-index: 3;
+  filter: drop-shadow(0 6px 20px rgba(232,102,10,.4));
+  animation: hero-rise .8s cubic-bezier(.34,1.56,.64,1) both;
+}
+/* Blade inside machine */
+.b1-blade {
+  animation: blade-spin 1.2s linear infinite;
+  transform-origin: center;
+}
+
+/* Right warm half */
+.b1-right {
+  flex: 1;
+  background: linear-gradient(135deg, #1c1008 0%, #2a1a06 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px 18px 16px 8px;
+  gap: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.b1-right::after {
+  content: '140°C';
+  position: absolute;
+  bottom: -10px; right: -5px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 72px; font-weight: 900;
+  color: rgba(232,102,10,.06);
+  line-height: 1;
+  pointer-events: none;
+}
+.b1-spec {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+}
+.b1-spec-item {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 10px; color: rgba(255,255,255,.55);
+}
+.b1-spec-item .dot { width: 5px; height: 5px; border-radius: 50%; background: #e8660a; flex-shrink:0; }
+.b1-spec-item strong { color: #fff; font-size: 11px; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   BANNER 2: "THERMAL VISION"
+   Infrared heat-map aesthetic. The machine glows hot.
+   Concentric heat rings ripple outward.
+   Text feels like a temperature readout on a pro kitchen display.
+═══════════════════════════════════════════════════════════ */
+
+@keyframes heat-ring-1 { 0% { transform:scale(.4); opacity:.8; } 100% { transform:scale(2.2); opacity:0; } }
+@keyframes heat-ring-2 { 0% { transform:scale(.4); opacity:.7; } 100% { transform:scale(2.4); opacity:0; } }
+@keyframes heat-ring-3 { 0% { transform:scale(.4); opacity:.6; } 100% { transform:scale(2.0); opacity:0; } }
+@keyframes therm-flicker { 0%,94%,100%{opacity:1;} 96%{opacity:.5;} 98%{opacity:1;} 99%{opacity:.7;} }
+@keyframes count-up { from{opacity:0;transform:translateY(6px);} to{opacity:1;transform:translateY(0);} }
+@keyframes scanbar { 0%{top:-30px;} 100%{top:140px;} }
+
+.b2 {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #030a0a;
+  height: 140px;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,.3), 0 0 0 1px rgba(255,80,0,.15);
+}
+
+/* Horizontal scan line */
+.b2-scan {
+  position: absolute; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,140,0,.4), transparent);
+  animation: scanbar 3s linear infinite;
+  pointer-events: none; z-index: 10;
+}
+
+/* Left: machine with heat rings */
+.b2-machine-zone {
+  width: 160px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  background: radial-gradient(circle at 50% 55%, #1a0500 0%, #030a0a 80%);
+}
+.b2-rings {
+  position: absolute;
+  width: 80px; height: 80px;
+  display: flex; align-items: center; justify-content: center;
+}
+.b2-ring {
+  position: absolute;
+  width: 80px; height: 80px; border-radius: 50%;
+  border: 1.5px solid rgba(255,80,0,.5);
+}
+.b2-ring:nth-child(1) { animation: heat-ring-1 2.4s ease-out infinite; }
+.b2-ring:nth-child(2) { animation: heat-ring-2 2.4s ease-out infinite .8s; }
+.b2-ring:nth-child(3) { animation: heat-ring-3 2.4s ease-out infinite 1.6s; }
+
+.b2-machine-glow {
+  position: relative; z-index: 2;
+  filter:
+    drop-shadow(0 0 8px rgba(255,80,0,.7))
+    drop-shadow(0 0 20px rgba(255,140,0,.4))
+    drop-shadow(0 0 40px rgba(255,80,0,.2));
+}
+
+/* Temp badge */
+.b2-temp {
+  position: absolute; top: 10px; left: 10px;
+  background: rgba(255,80,0,.12);
+  border: 1px solid rgba(255,80,0,.3);
+  border-radius: 4px;
+  padding: 3px 7px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px; letter-spacing: 1px;
+  color: #ff5000;
+  text-shadow: 0 0 8px rgba(255,80,0,.6);
+  animation: therm-flicker 6s ease-in-out infinite;
+}
+
+/* Divider */
+.b2-div {
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255,80,0,.4), rgba(255,140,0,.6), rgba(255,80,0,.4), transparent);
+  margin: 14px 0;
+}
+
+/* Right: text panel */
+.b2-text {
+  flex: 1;
+  padding: 14px 18px;
+  display: flex; flex-direction: column; justify-content: center; gap: 3px;
+  position: relative;
+}
+/* Faint thermal gradient overlay */
+.b2-text::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(255,80,0,.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.b2-code {
+  font-family: 'Bebas Neue', monospace;
+  font-size: 9px; letter-spacing: 4px;
+  color: rgba(255,80,0,.6);
+  animation: count-up .5s ease both;
+}
+.b2-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px; font-weight: 900; line-height: .95; text-transform: uppercase;
+  color: #fff;
+  animation: count-up .5s .1s ease both;
+}
+.b2-headline .heat { color: #ff7a00; text-shadow: 0 0 12px rgba(255,122,0,.5); }
+.b2-sub {
+  font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.4; margin-top: 3px;
+  animation: count-up .5s .2s ease both;
+}
+.b2-bottom {
+  margin-top: 10px;
+  display: flex; align-items: center; gap: 10px;
+}
+.b2-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg, #ff5000, #ff9500);
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12.5px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 7px 16px; border-radius: 3px; border: none; cursor: pointer; text-decoration: none;
+  box-shadow: 0 4px 16px rgba(255,80,0,.35);
+  transition: all .15s;
+}
+.b2-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,80,0,.5); }
+.b2-free {
+  font-size: 10px; color: rgba(255,255,255,.4);
+  border-left: 1px solid rgba(255,255,255,.1);
+  padding-left: 10px;
+  line-height: 1.3;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   BANNER 3: "MICHELIN STAGE"
+   Dramatic theatrical spotlight. Deep black stage.
+   The machine is centre-stage under a spotlight cone.
+   Ingredients cascade like confetti from above.
+   Typography feels like a playbill / theatre poster.
+═══════════════════════════════════════════════════════════ */
+
+@keyframes spotlight-breathe {
+  0%,100% { opacity: .9; transform: scaleX(1); }
+  50%      { opacity: 1; transform: scaleX(1.04); }
+}
+@keyframes confetti-1 { 0%{transform:translateY(-20px) rotate(0deg);opacity:0;} 20%{opacity:1;} 100%{transform:translateY(120px) rotate(360deg);opacity:0;} }
+@keyframes confetti-2 { 0%{transform:translateY(-20px) rotate(0deg);opacity:0;} 25%{opacity:1;} 100%{transform:translateY(110px) rotate(-270deg);opacity:0;} }
+@keyframes confetti-3 { 0%{transform:translateY(-20px) rotate(0deg);opacity:0;} 15%{opacity:1;} 100%{transform:translateY(130px) rotate(180deg);opacity:0;} }
+@keyframes confetti-4 { 0%{transform:translateY(-20px) rotate(0deg);opacity:0;} 30%{opacity:1;} 100%{transform:translateY(115px) rotate(-360deg);opacity:0;} }
+@keyframes confetti-5 { 0%{transform:translateY(-20px) rotate(0deg);opacity:0;} 20%{opacity:1;} 100%{transform:translateY(125px) rotate(270deg);opacity:0;} }
+@keyframes curtain-rise { from{transform:scaleY(1);transform-origin:top;} to{transform:scaleY(0);transform-origin:top;} }
+@keyframes stage-machine-enter { 0%{transform:translateY(30px) scale(.85);opacity:0;filter:brightness(0);} 60%{filter:brightness(.6);} 100%{transform:translateY(0) scale(1);opacity:1;filter:brightness(1);} }
+@keyframes title-stamp { 0%{transform:scale(1.4);opacity:0;letter-spacing:10px;} 100%{transform:scale(1);opacity:1;letter-spacing:.5px;} }
+
+.b3 {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #050505;
+  height: 140px;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  box-shadow: 0 8px 40px rgba(0,0,0,.5);
+}
+
+/* Falling ingredients (confetti) */
+.b3-confetti { position: absolute; top: 0; left: 0; right: 0; pointer-events: none; z-index: 5; height: 100%; overflow: hidden; }
+.b3-c { position: absolute; font-size: 14px; }
+.b3-c:nth-child(1) { left: 62%; animation: confetti-1 3.2s ease-in infinite; }
+.b3-c:nth-child(2) { left: 72%; animation: confetti-2 3.8s ease-in infinite .4s; }
+.b3-c:nth-child(3) { left: 56%; animation: confetti-3 3.5s ease-in infinite .9s; }
+.b3-c:nth-child(4) { left: 78%; animation: confetti-4 4s ease-in infinite 1.4s; }
+.b3-c:nth-child(5) { left: 66%; animation: confetti-5 3.3s ease-in infinite 1.8s; }
+.b3-c:nth-child(6) { left: 74%; animation: confetti-1 3.6s ease-in infinite 2.2s; }
+
+/* Stage left: theatrical text */
+.b3-left {
+  flex: 1;
+  padding: 14px 10px 14px 20px;
+  display: flex; flex-direction: column; justify-content: center; gap: 3px;
+  position: relative; z-index: 2;
+  background: linear-gradient(135deg, #0a0704 0%, #050505 100%);
+}
+/* Gold line accent */
+.b3-left::before {
+  content: '';
+  position: absolute; left: 0; top: 14px; bottom: 14px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #c9922a, #f5d376, #c9922a, transparent);
+}
+
+.b3-act {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px; font-style: italic; letter-spacing: 3px;
+  color: rgba(197,163,90,.7);
+  text-transform: uppercase;
+}
+.b3-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px; font-weight: 900; text-transform: uppercase; line-height: .95;
+  color: #fff;
+  animation: title-stamp .7s cubic-bezier(.34,1.36,.64,1) both;
+}
+.b3-headline .gold { color: #f5d376; }
+.b3-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px; font-style: italic;
+  color: rgba(255,255,255,.45); line-height: 1.4; margin-top: 2px;
+}
+.b3-btn {
+  margin-top: 7px;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent;
+  color: #f5d376;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 2px; border: 1px solid rgba(245,211,118,.4); cursor: pointer; text-decoration: none;
+  align-self: flex-start;
+  transition: all .2s;
+  position: relative; overflow: hidden;
+}
+.b3-btn::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, #c9922a, #f5d376);
+  transform: translateX(-100%); transition: transform .22s ease; z-index: 0;
+}
+.b3-btn:hover::before { transform: translateX(0); }
+.b3-btn:hover { color: #0a0704; border-color: #f5d376; }
+.b3-btn span, .b3-btn svg { position: relative; z-index: 1; }
+
+/* Stage right: SPOTLIGHT + MACHINE */
+.b3-stage {
+  width: 200px; flex-shrink: 0;
+  position: relative;
+  display: flex; align-items: flex-end; justify-content: center;
+  padding-bottom: 6px;
+  background: #050505;
+  overflow: hidden;
+}
+/* Spotlight cone from top */
+.b3-spotlight {
+  position: absolute;
+  top: -20px; left: 50%; transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-top: 180px solid rgba(255,230,120,.06);
+  animation: spotlight-breathe 3s ease-in-out infinite;
+  pointer-events: none;
+}
+/* Second spotlight for depth */
+.b3-spotlight2 {
+  position: absolute;
+  top: -10px; left: 50%; transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 170px solid rgba(255,220,80,.04);
+  pointer-events: none;
+}
+/* Floor glow */
+.b3-floor {
+  position: absolute;
+  bottom: 0; left: 10px; right: 10px; height: 20px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(245,211,118,.2) 0%, transparent 70%);
+}
+/* Shadow under machine */
+.b3-shadow {
+  position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
+  width: 70px; height: 8px; border-radius: 50%;
+  background: rgba(0,0,0,.6);
+  filter: blur(4px);
+}
+.b3-machine-hero {
+  position: relative; z-index: 3;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.8)) drop-shadow(0 0 30px rgba(245,211,118,.12));
+  animation: stage-machine-enter .9s cubic-bezier(.34,1.16,.64,1) .2s both;
+}
+
+/* Curtain panels (decorative) */
+.b3-curtain-l, .b3-curtain-r {
+  position: absolute; top: 0; bottom: 0; width: 14px;
+  background: repeating-linear-gradient(180deg, #1a0a00, #2a1100 4px, #1a0a00 8px);
+  z-index: 1;
+}
+.b3-curtain-l { left: 0; border-right: 1px solid rgba(197,163,90,.2); }
+.b3-curtain-r { right: 0; border-left: 1px solid rgba(197,163,90,.2); }
+
+/* Stage label */
+.b3-stage-label {
+  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 8px; font-style: italic; letter-spacing: 2px;
+  color: rgba(197,163,90,.5); white-space: nowrap; z-index: 4;
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <p>Horecagemak.nl — Creative Banner Designs</p>
+  <h1>3 SIGNATURE CONCEPTS</h1>
+</div>
+
+
+<!-- ═══════════════ CONCEPT 1 ═══════════════ -->
+<div class="concept">
+  <p class="concept-label">Concept 01 / 03</p>
+  <p class="concept-title">⚙️ "Blade Theatre" — Machine as Universe</p>
+  <div class="shell">
+    <div class="shell-top">
+      <div><div class="s-logo"><span class="o">Horeca</span><span class="b">Gemak</span></div><span class="s-tag">Alles onder één dak</span></div>
+    </div>
+    <div class="shell-nav">Keukenapparatuur › Cutters & Toebehoren › Cutters</div>
+    <div class="shell-body">
+      <div class="s-imgcol">
+        <svg width="120" height="148" viewBox="0 0 210 270" fill="none">
+          <rect x="42" y="188" width="126" height="66" rx="10" fill="#c0392b"/>
+          <rect x="50" y="195" width="110" height="54" rx="8" fill="#cc3a2a"/>
+          <ellipse cx="105" cy="188" rx="66" ry="17" fill="#c8ccce"/>
+          <rect x="40" y="98" width="130" height="94" rx="16" fill="#c8ccce"/>
+          <rect x="48" y="106" width="114" height="78" rx="12" fill="#d5dadc"/>
+          <ellipse cx="105" cy="98" rx="66" ry="14" fill="#b0b6b9"/>
+          <rect x="88" y="76" width="34" height="26" rx="7" fill="#7f8c8d"/>
+          <circle cx="74" cy="225" r="11" fill="#1a252f"/><circle cx="74" cy="225" r="7" fill="#2c3e50"/>
+          <circle cx="105" cy="225" r="11" fill="#1e8449"/><circle cx="105" cy="225" r="7" fill="#27ae60"/>
+          <circle cx="136" cy="225" r="11" fill="#922b21"/><circle cx="136" cy="225" r="7" fill="#e74c3c"/>
+          <ellipse cx="84" cy="132" rx="18" ry="26" fill="rgba(255,255,255,.12)"/>
+        </svg>
+      </div>
+      <div class="s-infocol">
+        <div class="s-title">Robot Cook® | 3.7L | Regelbare Snelheid (100-4.500RPM) | ≤140°C | 1.8kW (230V)</div>
+        <div class="s-price">3.106<small>,– excl. btw</small></div>
+        <div class="s-save">Je bespaart €164,00 (5%)</div>
+
+        <!-- BANNER 1: BLADE THEATRE -->
+        <div class="b1">
+          <!-- LEFT TEXT -->
+          <div class="b1-left">
+            <div class="b1-eyebrow">Gratis &amp; vrijblijvend</div>
+            <div class="b1-headline">Eerst<br>testen,<br><span class="slash">dan</span><br>kopen?</div>
+            <a href="#" class="b1-btn">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Plan een demo
+            </a>
+          </div>
+
+          <!-- CENTER: MACHINE + ORBITING INGREDIENTS -->
+          <div class="b1-center">
+            <div class="b1-halo"></div>
+            <div class="b1-orbit-system">
+              <div class="b1-ingredient" style="animation-duration:4s">🧅</div>
+              <div class="b1-ingredient" style="animation-duration:5.5s">🥕</div>
+              <div class="b1-ingredient" style="animation-duration:3.8s">🌿</div>
+              <div class="b1-ingredient" style="animation-duration:6.5s">🍋</div>
+              <div class="b1-ingredient" style="animation-duration:4.8s">🫑</div>
+            </div>
+            <!-- Machine SVG - detailed and beautiful -->
+            <svg class="b1-machine" width="78" height="96" viewBox="0 0 78 96" fill="none">
+              <!-- Base body -->
+              <rect x="12" y="62" width="54" height="28" rx="7" fill="#c0392b"/>
+              <rect x="17" y="66" width="44" height="22" rx="5" fill="#d44638"/>
+              <!-- Display panel -->
+              <rect x="18" y="68" width="20" height="14" rx="2.5" fill="#0d1b2a"/>
+              <rect x="20" y="70" width="7" height="10" rx="1" fill="#00e5ff" opacity=".85"/>
+              <rect x="30" y="72" width="6" height="1.5" rx=".5" fill="#4caf50"/>
+              <rect x="30" y="75" width="4" height="1.5" rx=".5" fill="#4caf50" opacity=".6"/>
+              <!-- Buttons -->
+              <circle cx="52" cy="73" r="4.5" fill="#1a252f"/><circle cx="52" cy="73" r="3" fill="#27ae60"/>
+              <circle cx="60" cy="73" r="4.5" fill="#1a252f"/><circle cx="60" cy="73" r="3" fill="#e74c3c"/>
+              <!-- Bowl -->
+              <ellipse cx="39" cy="62" rx="28" ry="8" fill="#b0b5b8"/>
+              <rect x="12" y="28" width="54" height="36" rx="10" fill="#bdc3c7"/>
+              <rect x="18" y="33" width="42" height="27" rx="7" fill="#cdd1d4"/>
+              <!-- Lid -->
+              <ellipse cx="39" cy="28" rx="28" ry="8" fill="#a8adb0"/>
+              <!-- Lid handle -->
+              <rect x="32" y="18" width="14" height="12" rx="4" fill="#7f8c8d"/>
+              <rect x="35" y="21" width="8" height="7" rx="2" fill="#6b7475"/>
+              <!-- Spinning blade inside bowl -->
+              <g transform="translate(39,46)">
+                <g class="b1-blade">
+                  <ellipse rx="16" ry="2" fill="rgba(180,190,195,.5)"/>
+                  <ellipse ry="16" rx="2" fill="rgba(180,190,195,.5)"/>
+                  <ellipse rx="11" ry="1.5" transform="rotate(45)" fill="rgba(180,190,195,.4)"/>
+                  <ellipse ry="11" rx="1.5" transform="rotate(45)" fill="rgba(180,190,195,.4)"/>
+                  <circle r="3" fill="#95a5a6"/>
+                </g>
+              </g>
+              <!-- Bowl shine -->
+              <ellipse cx="28" cy="42" rx="7" ry="10" fill="rgba(255,255,255,.15)"/>
+              <!-- Handle on side -->
+              <rect x="67" y="38" width="7" height="14" rx="3.5" fill="#a8adb0"/>
+            </svg>
+          </div>
+
+          <!-- RIGHT SPECS -->
+          <div class="b1-right">
+            <div class="b1-sub" style="font-size:10px;color:rgba(255,255,255,.4);text-align:right;line-height:1.4;">Wij komen bij u langs<br>voor een gratis demo.</div>
+            <div class="b1-spec">
+              <div class="b1-spec-item"><span class="dot"></span><strong>3.7L</strong>&nbsp;RVS kom</div>
+              <div class="b1-spec-item"><span class="dot"></span><strong>140°C</strong>&nbsp;verwarming</div>
+              <div class="b1-spec-item"><span class="dot"></span><strong>4500</strong>&nbsp;rpm</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="s-cart">🛒 IN WINKELWAGEN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CONCEPT 2 ═══════════════ -->
+<div class="concept">
+  <p class="concept-label">Concept 02 / 03</p>
+  <p class="concept-title">🔥 "Thermal Vision" — Heat Map Masterpiece</p>
+  <div class="shell">
+    <div class="shell-top">
+      <div><div class="s-logo"><span class="o">Horeca</span><span class="b">Gemak</span></div><span class="s-tag">Alles onder één dak</span></div>
+    </div>
+    <div class="shell-nav">Keukenapparatuur › Cutters & Toebehoren › Cutters</div>
+    <div class="shell-body">
+      <div class="s-imgcol">
+        <svg width="120" height="148" viewBox="0 0 210 270" fill="none">
+          <rect x="42" y="188" width="126" height="66" rx="10" fill="#c0392b"/>
+          <rect x="50" y="195" width="110" height="54" rx="8" fill="#cc3a2a"/>
+          <ellipse cx="105" cy="188" rx="66" ry="17" fill="#c8ccce"/>
+          <rect x="40" y="98" width="130" height="94" rx="16" fill="#c8ccce"/>
+          <rect x="48" y="106" width="114" height="78" rx="12" fill="#d5dadc"/>
+          <ellipse cx="105" cy="98" rx="66" ry="14" fill="#b0b6b9"/>
+          <rect x="88" y="76" width="34" height="26" rx="7" fill="#7f8c8d"/>
+          <circle cx="74" cy="225" r="11" fill="#1a252f"/><circle cx="74" cy="225" r="7" fill="#2c3e50"/>
+          <circle cx="105" cy="225" r="11" fill="#1e8449"/><circle cx="105" cy="225" r="7" fill="#27ae60"/>
+          <circle cx="136" cy="225" r="11" fill="#922b21"/><circle cx="136" cy="225" r="7" fill="#e74c3c"/>
+          <ellipse cx="84" cy="132" rx="18" ry="26" fill="rgba(255,255,255,.12)"/>
+        </svg>
+      </div>
+      <div class="s-infocol">
+        <div class="s-title">Robot Cook® | 3.7L | Regelbare Snelheid (100-4.500RPM) | ≤140°C | 1.8kW (230V)</div>
+        <div class="s-price">3.106<small>,– excl. btw</small></div>
+        <div class="s-save">Je bespaart €164,00 (5%)</div>
+
+        <!-- BANNER 2: THERMAL -->
+        <div class="b2">
+          <div class="b2-scan"></div>
+          <div class="b2-machine-zone">
+            <div class="b2-temp">140°C</div>
+            <div class="b2-rings">
+              <div class="b2-ring"></div>
+              <div class="b2-ring"></div>
+              <div class="b2-ring"></div>
+            </div>
+            <!-- Machine rendered in hot thermal palette -->
+            <svg class="b2-machine-glow" width="74" height="90" viewBox="0 0 78 96" fill="none">
+              <rect x="12" y="62" width="54" height="28" rx="7" fill="#7a0000"/>
+              <rect x="17" y="66" width="44" height="22" rx="5" fill="#aa1100"/>
+              <rect x="18" y="68" width="20" height="14" rx="2.5" fill="#1a0000"/>
+              <rect x="20" y="70" width="7" height="10" rx="1" fill="#ff5000" opacity=".9"/>
+              <rect x="30" y="72" width="6" height="1.5" rx=".5" fill="#ff9000"/>
+              <circle cx="52" cy="73" r="4.5" fill="#3a0000"/><circle cx="52" cy="73" r="3" fill="#ff6000"/>
+              <circle cx="60" cy="73" r="4.5" fill="#3a0000"/><circle cx="60" cy="73" r="3" fill="#ff3000"/>
+              <ellipse cx="39" cy="62" rx="28" ry="8" fill="#cc4400"/>
+              <rect x="12" y="28" width="54" height="36" rx="10" fill="#dd6600"/>
+              <rect x="18" y="33" width="42" height="27" rx="7" fill="#ff8800"/>
+              <ellipse cx="39" cy="28" rx="28" ry="8" fill="#cc5500"/>
+              <rect x="32" y="18" width="14" height="12" rx="4" fill="#994400"/>
+              <g transform="translate(39,46)">
+                <g class="b1-blade" style="animation-duration:0.8s">
+                  <ellipse rx="16" ry="2" fill="rgba(255,150,0,.6)"/>
+                  <ellipse ry="16" rx="2" fill="rgba(255,150,0,.6)"/>
+                  <circle r="3" fill="#ffaa00"/>
+                </g>
+              </g>
+              <ellipse cx="28" cy="42" rx="7" ry="10" fill="rgba(255,200,100,.2)"/>
+              <rect x="67" y="38" width="7" height="14" rx="3.5" fill="#cc5500"/>
+            </svg>
+          </div>
+          <div class="b2-div"></div>
+          <div class="b2-text">
+            <div class="b2-code">SYS: DEMO_REQUEST // LOCATIE</div>
+            <div class="b2-headline">EERST TESTEN,<br><span class="heat">DAN KOPEN?</span></div>
+            <div class="b2-sub">Wij komen bij u langs voor een gratis demo op locatie.</div>
+            <div class="b2-bottom">
+              <a href="#" class="b2-btn">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Plan een demo
+              </a>
+              <div class="b2-free">Gratis &amp;<br>vrijblijvend</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="s-cart">🛒 IN WINKELWAGEN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CONCEPT 3 ═══════════════ -->
+<div class="concept">
+  <p class="concept-label">Concept 03 / 03</p>
+  <p class="concept-title">🎭 "Michelin Stage" — Theatrical Spotlight</p>
+  <div class="shell">
+    <div class="shell-top">
+      <div><div class="s-logo"><span class="o">Horeca</span><span class="b">Gemak</span></div><span class="s-tag">Alles onder één dak</span></div>
+    </div>
+    <div class="shell-nav">Keukenapparatuur › Cutters & Toebehoren › Cutters</div>
+    <div class="shell-body">
+      <div class="s-imgcol">
+        <svg width="120" height="148" viewBox="0 0 210 270" fill="none">
+          <rect x="42" y="188" width="126" height="66" rx="10" fill="#c0392b"/>
+          <rect x="50" y="195" width="110" height="54" rx="8" fill="#cc3a2a"/>
+          <ellipse cx="105" cy="188" rx="66" ry="17" fill="#c8ccce"/>
+          <rect x="40" y="98" width="130" height="94" rx="16" fill="#c8ccce"/>
+          <rect x="48" y="106" width="114" height="78" rx="12" fill="#d5dadc"/>
+          <ellipse cx="105" cy="98" rx="66" ry="14" fill="#b0b6b9"/>
+          <rect x="88" y="76" width="34" height="26" rx="7" fill="#7f8c8d"/>
+          <circle cx="74" cy="225" r="11" fill="#1a252f"/><circle cx="74" cy="225" r="7" fill="#2c3e50"/>
+          <circle cx="105" cy="225" r="11" fill="#1e8449"/><circle cx="105" cy="225" r="7" fill="#27ae60"/>
+          <circle cx="136" cy="225" r="11" fill="#922b21"/><circle cx="136" cy="225" r="7" fill="#e74c3c"/>
+          <ellipse cx="84" cy="132" rx="18" ry="26" fill="rgba(255,255,255,.12)"/>
+        </svg>
+      </div>
+      <div class="s-infocol">
+        <div class="s-title">Robot Cook® | 3.7L | Regelbare Snelheid (100-4.500RPM) | ≤140°C | 1.8kW (230V)</div>
+        <div class="s-price">3.106<small>,– excl. btw</small></div>
+        <div class="s-save">Je bespaart €164,00 (5%)</div>
+
+        <!-- BANNER 3: MICHELIN STAGE -->
+        <div class="b3">
+          <!-- Falling ingredients -->
+          <div class="b3-confetti">
+            <span class="b3-c">🧅</span>
+            <span class="b3-c">🥕</span>
+            <span class="b3-c">🌿</span>
+            <span class="b3-c">🍋</span>
+            <span class="b3-c">🫑</span>
+            <span class="b3-c">🧄</span>
+          </div>
+
+          <!-- LEFT THEATRICAL TEXT -->
+          <div class="b3-left">
+            <div class="b3-act">— Gratis &amp; Vrijblijvend —</div>
+            <div class="b3-headline">EERST TESTEN,<br><span class="gold">DAN KOPEN?</span></div>
+            <div class="b3-sub">Wij komen bij u langs voor een gratis demo op locatie.</div>
+            <a href="#" class="b3-btn">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Plan een demo</span>
+            </a>
+          </div>
+
+          <!-- RIGHT STAGE -->
+          <div class="b3-stage">
+            <div class="b3-curtain-l"></div>
+            <div class="b3-spotlight"></div>
+            <div class="b3-spotlight2"></div>
+            <div class="b3-stage-label">— op uw locatie —</div>
+            <div class="b3-shadow"></div>
+            <svg class="b3-machine-hero" width="82" height="100" viewBox="0 0 78 96" fill="none">
+              <rect x="12" y="62" width="54" height="28" rx="7" fill="#c0392b"/>
+              <rect x="17" y="66" width="44" height="22" rx="5" fill="#d44638"/>
+              <rect x="18" y="68" width="20" height="14" rx="2.5" fill="#0d1b2a"/>
+              <rect x="20" y="70" width="7" height="10" rx="1" fill="#00e5ff" opacity=".85"/>
+              <rect x="30" y="72" width="6" height="1.5" rx=".5" fill="#4caf50"/>
+              <rect x="30" y="75" width="4" height="1.5" rx=".5" fill="#4caf50" opacity=".6"/>
+              <circle cx="52" cy="73" r="4.5" fill="#1a252f"/><circle cx="52" cy="73" r="3" fill="#27ae60"/>
+              <circle cx="60" cy="73" r="4.5" fill="#1a252f"/><circle cx="60" cy="73" r="3" fill="#e74c3c"/>
+              <rect x="56" y="80" width="8" height="8" rx="2" fill="#1a252f"/>
+              <rect x="57.5" y="81.5" width="5" height="5" rx="1" fill="#f5d376" opacity=".7"/>
+              <ellipse cx="39" cy="62" rx="28" ry="8" fill="#b0b5b8"/>
+              <rect x="12" y="28" width="54" height="36" rx="10" fill="#bdc3c7"/>
+              <rect x="18" y="33" width="42" height="27" rx="7" fill="#cdd1d4"/>
+              <ellipse cx="39" cy="28" rx="28" ry="8" fill="#a8adb0"/>
+              <rect x="32" y="18" width="14" height="12" rx="4" fill="#7f8c8d"/>
+              <rect x="35" y="21" width="8" height="7" rx="2" fill="#6b7475"/>
+              <g transform="translate(39,46)">
+                <g class="b1-blade" style="animation-duration:1s">
+                  <ellipse rx="16" ry="2" fill="rgba(180,190,195,.5)"/>
+                  <ellipse ry="16" rx="2" fill="rgba(180,190,195,.5)"/>
+                  <circle r="3" fill="#95a5a6"/>
+                </g>
+              </g>
+              <ellipse cx="28" cy="42" rx="7" ry="10" fill="rgba(255,255,255,.18)"/>
+              <rect x="67" y="38" width="7" height="14" rx="3.5" fill="#a8adb0"/>
+            </svg>
+            <div class="b3-floor"></div>
+            <div class="b3-curtain-r"></div>
+          </div>
+        </div>
+
+        <button class="s-cart">🛒 IN WINKELWAGEN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p style="text-align:center;color:#333;font-size:10px;letter-spacing:3px;text-transform:uppercase;">Welk concept heeft uw voorkeur?</p>
+
+</body>
+</html>
